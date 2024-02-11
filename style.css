@@ -10,6 +10,7 @@ body{
     background: linear-gradient(to right bottom, #00FFEE, #FF00FF);
     background-size: 200% 200%;
     animation: gradientAnimation 3s ease-in-out infinite alternate;
+    overflow: hidden;
 }
 
 .container{
@@ -19,22 +20,24 @@ body{
     align-items: center;
     height: 100vh;
 }
+
 #time, #date{
     border: 2px solid purple;
     border-radius: 15px;
     letter-spacing: 3px;
     margin: 20px;
-    animation: boxshadowAnimation 3s ease-in-out infinite alternate;
+    animation: boxshadowAnimation 3s ease-in-out infinite alternate, movewithcolor 2s ease-in-out infinite alternate;
+    text-align: center; /* Center text */
 }
 
 #time{
-    padding: 15px 100px;
-    font-size: 80px;
+    padding: 15px 50px; /* Adjust padding for smaller screens */
+    font-size: 5vw; /* Responsive font size */
 }
 
 #date{
-    padding: 15px 100px;
-    font-size: 50px;
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    font-size: 3.5vw; /* Responsive font size */
 }
 
 @keyframes gradientAnimation {
@@ -52,5 +55,24 @@ body{
     }
     100%{
         box-shadow: -5px -5px 10px inset #ff00ff, 0 0 3px #000;
+    }
+}
+
+@keyframes movewithcolor{
+    0%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+/* Media query for smaller screens (phones) */
+@media only screen and (max-width: 600px) {
+    #time {
+        font-size: 8vw; /* Responsive font size */
+    }
+    #date {
+        font-size: 5vw; /* Responsive font size */
     }
 }
