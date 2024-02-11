@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+    color: #fff;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to right bottom, #00FFEE, #FF00FF);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease-in-out infinite alternate;
+    overflow: hidden;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#time-container, #date-container{
+    border: 2px solid purple;
+    border-radius: 15px;
+    letter-spacing: 5px;
+    margin: 20px;
+    animation: boxshadowAnimation 3s ease-in-out infinite alternate, movewithcolor 2s ease-in-out infinite alternate;
+    text-align: center; /* Center text */
+}
+
+#time-container{
+    padding: 15px 50px; /* Adjust padding for smaller screens */
+    font-size: 5vw; /* Responsive font size */
+}
+
+#date-container{
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+    font-size: 4vw; /* Responsive font size */
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes boxshadowAnimation{
+    0%{
+        box-shadow: 5px 5px 10px inset #00ffee, 0 0 3px #000;
+    }
+    100%{
+        box-shadow: -5px -5px 10px inset #ff00ff, 0 0 3px #000;
+    }
+}
+
+@keyframes movewithcolor{
+    0%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(5px);
+    }
+}
+
+/* Media query for smaller screens (phones) */
+@media only screen and (max-width: 600px) {
+    #time {
+        font-size: 8vw; /* Responsive font size */
+    }
+    #date {
+        font-size: 5vw; /* Responsive font size */
+    }
+}
