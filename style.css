@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to right bottom, #00FFEE, #FF00FF);
+    background-size: 200% 200%;
+    animation: gradientAnimation 3s ease-in-out infinite alternate;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+#time, #date{
+    border: 2px solid purple;
+    border-radius: 15px;
+    letter-spacing: 3px;
+    margin: 20px;
+    animation: boxshadowAnimation 3s ease-in-out infinite alternate;
+}
+
+#time{
+    padding: 15px 100px;
+    font-size: 80px;
+}
+
+#date{
+    padding: 15px 100px;
+    font-size: 50px;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+@keyframes boxshadowAnimation{
+    0%{
+        box-shadow: 5px 5px 10px inset #00ffee, 0 0 3px #000;
+    }
+    100%{
+        box-shadow: -5px -5px 10px inset #ff00ff, 0 0 3px #000;
+    }
+}
