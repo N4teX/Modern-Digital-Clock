@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Prompt', sans-serif;
     color: #fff;
 }
 
@@ -21,23 +23,23 @@ body{
     height: 100vh;
 }
 
-#time, #date{
+#time-container, #date-container{
     border: 2px solid purple;
     border-radius: 15px;
-    letter-spacing: 3px;
+    letter-spacing: 5px;
     margin: 20px;
     animation: boxshadowAnimation 3s ease-in-out infinite alternate, movewithcolor 2s ease-in-out infinite alternate;
     text-align: center; /* Center text */
 }
 
-#time{
+#time-container{
     padding: 15px 50px; /* Adjust padding for smaller screens */
     font-size: 5vw; /* Responsive font size */
 }
 
-#date{
+#date-container{
     padding: 10px 20px; /* Adjust padding for smaller screens */
-    font-size: 3.5vw; /* Responsive font size */
+    font-size: 4vw; /* Responsive font size */
 }
 
 @keyframes gradientAnimation {
