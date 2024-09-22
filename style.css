@@ -29,17 +29,17 @@ body{
     letter-spacing: 5px;
     margin: 20px;
     animation: boxshadowAnimation 3s ease-in-out infinite alternate, movewithcolor 2s ease-in-out infinite alternate;
-    text-align: center; /* Center text */
+    text-align: center; 
 }
 
 #time-container{
-    padding: 15px 50px; /* Adjust padding for smaller screens */
-    font-size: 5vw; /* Responsive font size */
+    padding: 15px 50px; 
+    font-size: 5vw; 
 }
 
 #date-container{
-    padding: 10px 20px; /* Adjust padding for smaller screens */
-    font-size: 4vw; /* Responsive font size */
+    padding: 10px 20px; 
+    font-size: 4vw; 
 }
 
 @keyframes gradientAnimation {
